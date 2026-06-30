@@ -1,3 +1,15 @@
+html {
+    /* CLICKING A LINK SCROLLS TO THE AREA INSTEAD OF JUMPING */
+    scroll-behavior: smooth;
+
+    /* ENFORCES CORRECT SIZE FOR TEXT ON SMALLER / ALTERNATE SCREENS LIKE PHONES */
+    /* -moz AND -webkit ARE VENDOR PREFIXES */
+    /* THIS IS A SAFEGUARD AND ISNT VERY NECESSARY FOR MODERN BROWSERS */
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
 body {
     font-family: sans-serif;
 }
@@ -25,7 +37,27 @@ p {
 a {
     text-decoration: line-through;
     color: #13aad7;
-    cursor: not-allowed;
+    display: inline-block;
+    transform: scale(1);
+    transition: transform 0.2s;
+}
+
+/* PSEUDO CLASS THAT ACTIVATES WHENEVER SOMEONE HOVERS ON THE LINK */
+a:hover {
+    transform: scale(1.2);
+}
+
+/* PSEUDO CLASS APPLIES WHEN THE LINK IS BEING CLICKED */
+a:active {
+    color: #e45c09;
+}
+
+.back {
+    color: #888;
+}
+
+.learn-more {
+    display: block;
 }
 
 header {
