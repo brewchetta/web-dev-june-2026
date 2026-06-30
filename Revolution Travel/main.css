@@ -1,3 +1,7 @@
+body {
+    font-family: sans-serif;
+}
+
 /* DRY - DONT REPEAT YOURSELF */
 
 /* STYLING ADDED TO header, nav, main, & footer */
@@ -8,7 +12,47 @@ header, nav, main, footer {
     max-width: 800px;
 }
 
-img {
+h1, h2, h3, h4 {
+    color: #e45c09;
+    font-weight: normal;
+}
+
+p {
+    line-height: 24px;
+    margin-bottom: 30px;
+}
+
+a {
+    text-decoration: line-through;
+    color: #13aad7;
+    cursor: not-allowed;
+}
+
+header {
+    text-align: center;
+}
+
+/* SELECT ALL img INSIDE OF header */
+header img {
+          /* TOP RIGHT BOTTOM LEFT */
+    padding: 10px  0     0px   0;
+    /* padding-top: 20px;
+    padding-bottom: 20px; */
+}
+
+header h1 {
+    border-top: solid #ccc 2px;
+    padding-top: 20px;
+    text-align: left;
+}
+
+nav ul {
+    /* CHANGE BULLETS TO AIRPLANES */
+    list-style-image: url("images/favicon-16x16.png");
+}
+
+/* SELECT ALL img INSIDE OF main */
+main img {
     /* 100% THE SIZE OF THE CONTAINER - NOT THE SCREEN UNLESS THE SCREEN IS THE CONTAINER */
     width: 100%;
 }
