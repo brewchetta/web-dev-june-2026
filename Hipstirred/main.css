@@ -1,0 +1,106 @@
+body {
+    /* REMOVE DEFAULT MARGINS FROM THE BODY */
+    margin: 0;
+    font-family: sans-serif;
+}
+
+nav {
+    display: flex;
+    /* BY DEFAULT JUSTIFY CONTENT MOVES / SPACES THINGS ALONG THE HORIZONTAL PLANE  */
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #520;
+    text-transform: uppercase;
+    margin-right: 20px;
+}
+
+header {
+    background-color: #520;
+    color: #fff;
+    text-align: start;
+    padding: 15%;
+    text-align: center;
+
+    /* BACKGROUND */
+
+    /* url MEANS GO FIND A IMAGE FILE HERE OR ON THE WEB */
+    background-image: url(images/hero.jpg);
+    background-repeat: no-repeat;
+    /* COVER WILL STRETCH THE BG TO COVER THE WHOLE AREA */
+    background-size: cover;
+    /* POSITION THE IMAGE TO CENTER IT */
+    background-position: center;
+}
+
+h1 {
+    /* add google font styles here */
+    font-size: 90px;
+    font-family: "Rye", serif;
+    font-weight: 400;
+    font-style: normal;
+
+    /* add animation here */
+    animation: lower-in 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* PSEUDO CLASS TO CHANGE THE FONT WHEN WE HOVER */
+h1 span:hover {
+    font-family: "Kablammo", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "MORF" 0;
+}
+
+/* ADD ANIMATION  */
+@keyframes lower-in {
+    0% {
+        transform: translateY(-1000px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+header p {
+    font-family: "Uncial Antiqua", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 26px;
+    padding-top: 50px;
+}
+
+header img {
+    filter: invert(1);
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    border: solid #231f20 2px;
+    padding: 0.5em;
+    width: 105px;
+    height: 35px;
+}
+
+#wrapper {
+    max-width: 800px;
+    margin: auto;
+}
+
+main, footer {
+    padding: 20px;
+}
+
+footer {
+    background-color: #520;
+    color: #fff;
+}
+
+footer img {
+    filter: invert(1);
+    vertical-align: bottom;
+}
