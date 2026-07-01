@@ -1,16 +1,25 @@
 /* CHETT'S CSS */
 
-main {
-	display: grid;
-	/* WE WILL HAVE TWO COLUMNS IN THE GRID */
-	grid-template-columns: 2fr 1fr;
-	/* ADD A GAP BETWEEN THE ITEMS */
-	gap: 30px;
+html {
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	text-size-adjust: 100%;
 }
 
 #statement {
 	/* GO ACROSS 2 COLUMNS INSTEAD OF 1 */
 	grid-column: span 2;
+}
+
+/* WHEN WE HIT 576px OR HIGHER IT SWITCHES TO GRID */
+@media (min-width: 576px) {
+	main {
+		display: grid;
+		/* WE WILL HAVE TWO COLUMNS IN THE GRID */
+		grid-template-columns: 2fr 1fr;
+		/* ADD A GAP BETWEEN THE ITEMS */
+		gap: 30px;
+	}
 }
 
 /* DEFAULT CSS GIVEN TO US */

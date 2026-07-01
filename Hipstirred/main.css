@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     /* REMOVE DEFAULT MARGINS FROM THE BODY */
     margin: 0;
@@ -29,7 +33,7 @@ header {
     /* BACKGROUND */
 
     /* url MEANS GO FIND A IMAGE FILE HERE OR ON THE WEB */
-    background-image: url(images/hero.jpg);
+    background-image: url(images/hero@2x.jpg);
     background-repeat: no-repeat;
     /* COVER WILL STRETCH THE BG TO COVER THE WHOLE AREA */
     background-size: cover;
@@ -98,9 +102,23 @@ main, footer {
 footer {
     background-color: #520;
     color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 footer img {
     filter: invert(1);
     vertical-align: bottom;
+}
+
+/* FLEXBOX INSIDE A FLEXBOX */
+footer div {
+    /* border: yellow solid 3px; */
+    width: 225px;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    /* THIS CHANGES THE SIZE (250px width) TO INCLUDE PADDING AND BORDERS */
+    box-sizing: border-box;
 }
