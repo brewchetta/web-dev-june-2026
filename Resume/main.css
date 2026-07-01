@@ -1,3 +1,20 @@
+/* CHETT'S CSS */
+
+main {
+	display: grid;
+	/* WE WILL HAVE TWO COLUMNS IN THE GRID */
+	grid-template-columns: 2fr 1fr;
+	/* ADD A GAP BETWEEN THE ITEMS */
+	gap: 30px;
+}
+
+#statement {
+	/* GO ACROSS 2 COLUMNS INSTEAD OF 1 */
+	grid-column: span 2;
+}
+
+/* DEFAULT CSS GIVEN TO US */
+
 body {
 	font-family: "Vollkorn", serif;
 	line-height: 1.5;
